@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-image: url("../masha.jpg");
+    background-position: center;
+    background-size: cover;
+    perspective: 1500px;
+    margin: 100px auto;
+}
+
+.box-left {
+    width: 250px;
+    height: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    transform-origin: left center;
+}
+
+.box-right {
+    width: 250px;
+    height: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    transform-origin: right center;
+}
+
+.box:hover .box-left {
+    transform: rotateY(-120deg);
+}
+
+.box:hover .box-right {
+    transform: rotateY(120deg);
+}
